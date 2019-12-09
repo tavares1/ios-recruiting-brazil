@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AllMoviesViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .yellow
+		self.title = "Movies"
 	}
-
-
+	
 }
 

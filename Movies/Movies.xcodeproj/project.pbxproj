@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		15B6DD67239EC68B00E0D988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B6DD66239EC68B00E0D988 /* AppDelegate.swift */; };
 		15B6DD69239EC68B00E0D988 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B6DD68239EC68B00E0D988 /* SceneDelegate.swift */; };
-		15B6DD6B239EC68B00E0D988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B6DD6A239EC68B00E0D988 /* ViewController.swift */; };
+		15B6DD6B239EC68B00E0D988 /* AllMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B6DD6A239EC68B00E0D988 /* AllMoviesViewController.swift */; };
 		15B6DD70239EC68E00E0D988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B6DD6F239EC68E00E0D988 /* Assets.xcassets */; };
 		15B6DD73239EC68E00E0D988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B6DD71239EC68E00E0D988 /* LaunchScreen.storyboard */; };
+		15B6DD90239ECE8A00E0D988 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B6DD8F239ECE8A00E0D988 /* CustomTabBarController.swift */; };
+		15B6DD92239ED1C600E0D988 /* FavoritedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B6DD91239ED1C600E0D988 /* FavoritedMoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15B6DD63239EC68B00E0D988 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B6DD66239EC68B00E0D988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15B6DD68239EC68B00E0D988 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15B6DD6A239EC68B00E0D988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15B6DD6A239EC68B00E0D988 /* AllMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesViewController.swift; sourceTree = "<group>"; };
 		15B6DD6F239EC68E00E0D988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B6DD72239EC68E00E0D988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15B6DD74239EC68E00E0D988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15B6DD8F239ECE8A00E0D988 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		15B6DD91239ED1C600E0D988 /* FavoritedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedMoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,15 +58,8 @@
 		15B6DD65239EC68B00E0D988 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				15B6DD7F239ECAB300E0D988 /* Filtred Movies */,
-				15B6DD7E239ECAAD00E0D988 /* Favorited Movies */,
-				15B6DD7D239ECA9900E0D988 /* All Movies */,
-				15B6DD66239EC68B00E0D988 /* AppDelegate.swift */,
-				15B6DD68239EC68B00E0D988 /* SceneDelegate.swift */,
-				15B6DD6A239EC68B00E0D988 /* ViewController.swift */,
-				15B6DD6F239EC68E00E0D988 /* Assets.xcassets */,
-				15B6DD71239EC68E00E0D988 /* LaunchScreen.storyboard */,
-				15B6DD74239EC68E00E0D988 /* Info.plist */,
+				15B6DD94239ED97F00E0D988 /* Common Use */,
+				15B6DD93239ED94A00E0D988 /* Business Rules */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -131,6 +128,7 @@
 		15B6DD86239ECAD800E0D988 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				15B6DD91239ED1C600E0D988 /* FavoritedMoviesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +164,7 @@
 		15B6DD8C239ECB0E00E0D988 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				15B6DD6A239EC68B00E0D988 /* AllMoviesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +181,61 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		15B6DD93239ED94A00E0D988 /* Business Rules */ = {
+			isa = PBXGroup;
+			children = (
+				15B6DD7D239ECA9900E0D988 /* All Movies */,
+				15B6DD7E239ECAAD00E0D988 /* Favorited Movies */,
+				15B6DD7F239ECAB300E0D988 /* Filtred Movies */,
+			);
+			path = "Business Rules";
+			sourceTree = "<group>";
+		};
+		15B6DD94239ED97F00E0D988 /* Common Use */ = {
+			isa = PBXGroup;
+			children = (
+				15B6DD98239ED9CF00E0D988 /* Plist */,
+				15B6DD97239ED9B800E0D988 /* Resources */,
+				15B6DD96239ED9A700E0D988 /* ViewControllers */,
+				15B6DD95239ED99900E0D988 /* Protocols */,
+			);
+			path = "Common Use";
+			sourceTree = "<group>";
+		};
+		15B6DD95239ED99900E0D988 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				15B6DD66239EC68B00E0D988 /* AppDelegate.swift */,
+				15B6DD68239EC68B00E0D988 /* SceneDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		15B6DD96239ED9A700E0D988 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				15B6DD8F239ECE8A00E0D988 /* CustomTabBarController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		15B6DD97239ED9B800E0D988 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15B6DD6F239EC68E00E0D988 /* Assets.xcassets */,
+				15B6DD71239EC68E00E0D988 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15B6DD98239ED9CF00E0D988 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				15B6DD74239EC68E00E0D988 /* Info.plist */,
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15B6DD6B239EC68B00E0D988 /* ViewController.swift in Sources */,
+				15B6DD6B239EC68B00E0D988 /* AllMoviesViewController.swift in Sources */,
 				15B6DD67239EC68B00E0D988 /* AppDelegate.swift in Sources */,
+				15B6DD90239ECE8A00E0D988 /* CustomTabBarController.swift in Sources */,
 				15B6DD69239EC68B00E0D988 /* SceneDelegate.swift in Sources */,
+				15B6DD92239ED1C600E0D988 /* FavoritedMoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -378,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
