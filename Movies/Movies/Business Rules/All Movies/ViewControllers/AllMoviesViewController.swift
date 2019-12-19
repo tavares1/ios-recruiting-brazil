@@ -8,12 +8,44 @@
 
 import UIKit
 
-class AllMoviesViewController: UIViewController {
+class AllMoviesViewController: UIViewController, NavigationBarConfigurable {
 
-	override func viewDidLoad() {
+    private var movies: [Movie] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.setupCollectionView()
+            }
+        }
+    }
+
+    private var dataSource: AllMoviesDataSource?
+    private lazy var sceneView = AllMoviesViewControllerScene()
+    
+    override func loadView() {
+        self.view = sceneView
+    }
+    
+    override func viewDidLoad() {
 		super.viewDidLoad()
-		self.title = "Movies"
-	}
-	
+        setupNavigationBar(title: "Movies", tintColor: .moviesYellow, backgroundColor: .moviesYellow)
+        setupCollectionView()
+        fetchMovies()
+    }
+    
+    func fetchMovies() {
+        NetworkClient.shared?.fetchMovies(from: .popular, result: { (result) in
+            switch result {
+            case .success(let movieResponse):
+                self.movies = movieResponse.results
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+    }
+    
+    
+    func setupCollectionView() {
+        dataSource = AllMoviesDataSource(movies: movies)
+        sceneView.moviesCollectionView.dataSource = dataSource
+    }
 }
-

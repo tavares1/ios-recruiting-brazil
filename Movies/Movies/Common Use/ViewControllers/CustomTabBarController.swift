@@ -13,11 +13,12 @@ class CustomTabBarController: UITabBarController {
 	
 	override func viewDidLoad() {
 		configureTabBarItems()
+//        tabBar.isTranslucent = false
+        tabBar.barTintColor = UIColor.moviesYellow
+        tabBar.tintColor = .black
 	}
 	
 	func configureTabBarItems() {
-		
-		
 		let allMoviesViewController =
 		UINavigationController(rootViewController: AllMoviesViewController())
 		
